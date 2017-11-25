@@ -20,6 +20,8 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:descendantFocusability="beforeDescendants"
+        android:focusableInTouchMode="true"
         app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
         <android.support.design.widget.TextInputLayout
@@ -40,11 +42,24 @@
                 android:hint="@string/input_add_task" />
         </android.support.design.widget.TextInputLayout>
 
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/tv_field_tasks"
+            style="@style/TextAppearance.AppCompat.Medium"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/til_task"
+            android:layout_marginBottom="@dimen/space_between_views"
+            android:layout_marginEnd="@dimen/space_between_views"
+            android:layout_marginLeft="@dimen/space_between_views"
+            android:layout_marginRight="@dimen/space_between_views"
+            android:layout_marginStart="@dimen/space_between_views"
+            android:text="@string/field_tasks" />
+
         <android.support.v7.widget.RecyclerView
             android:id="@+id/rv_tasks"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_below="@+id/til_task" />
+            android:layout_below="@+id/tv_field_tasks" />
     </RelativeLayout>
 
     <android.support.design.widget.FloatingActionButton

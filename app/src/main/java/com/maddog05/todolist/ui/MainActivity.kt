@@ -88,8 +88,9 @@ class MainActivity : AppCompatActivity() {
         AlertDialog.Builder(this)
                 .setTitle(R.string.app_name)
                 .setMessage(R.string.dialog_delete_task)
-                .setNegativeButton(R.string.action_cancel) { dialogInterface, p1 -> dialogInterface.dismiss() }
-                .setPositiveButton(R.string.action_delete) { dialogInterface, p1 ->
+                //COMPILER SUGGEST DO THIS (_) FOR UNUSED VALUES IN FUNCTIONS
+                .setNegativeButton(R.string.action_cancel) { dialogInterface, _ -> dialogInterface.dismiss() }
+                .setPositiveButton(R.string.action_delete) { dialogInterface, _ ->
                     dialogInterface.dismiss()
                     removeTask(task.date)
                 }
